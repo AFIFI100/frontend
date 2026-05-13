@@ -15,7 +15,7 @@ RUN npm run build
 
 FROM nginx:1.27-alpine
 
-COPY --from=build /app/dist/ecommerce-frontend /usr/share/nginx/html
+COPY --from=build /app/dist/ecommerce-frontend/browser  /usr/share/nginx/html
 
 EXPOSE 80
 
